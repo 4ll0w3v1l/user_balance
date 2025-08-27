@@ -13,7 +13,7 @@ def create_user(user: User, request: Request):
 
     return user
 
-@router.get("/")
+@router.get("/", response_model=dict[str, User])
 def get_users(request: Request):
     if request.app.state.db:
         return request.app.state.db

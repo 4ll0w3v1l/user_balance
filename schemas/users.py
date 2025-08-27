@@ -9,3 +9,6 @@ class UserTransfer(BaseModel):
     from_user_id: int
     to_user_id: int
     amount: int
+
+class UserTransferResponse(BaseModel):
+    success: bool
